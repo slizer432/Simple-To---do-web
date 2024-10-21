@@ -3,6 +3,7 @@
 session_start();
 
 require 'config.php';
+$error = '';
 
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $username = $_POST['username'];
@@ -17,7 +18,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         header('Location: dashboard.php');
         exit();
     } else {
-        echo 'Invalid username or password!';
+        $error = "Invalid username or password!" . '<br><br>';
     }
 }
 ?>
@@ -25,16 +26,15 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
 <head>
     <title>Login Page</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="log_in_styles.css">
 </head>
 
 <body>
-    <h1>Login</h1>
     <form action="index.php" method="POST">
-        <label for="username">Username:</label><br>
-        <input type="text" id="username" name="username" required><br>
-        <label for="password">Password:</label><br>
-        <input type="password" id="password" name="password" required><br><br>
+        <h1>Login</h1>
+        <p id="error"><?php echo $error; ?></p>
+        <input type="text" id="username" name="username" required placeholder="Username"><br><br>
+        <input type="password" id="password" name="password" required placeholder="Password"><br><br>
         <input type="submit" value="log in">
         <p>Don't have an account? Register <a href="register.php">here</a></p>
     </form>

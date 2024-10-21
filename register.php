@@ -2,6 +2,10 @@
 
 require('config.php');
 
+// Initialize error variables
+$error1 = '';
+$error2 = '';
+
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $username = $_POST['username'];
     $email = $_POST['email'];
@@ -12,9 +16,9 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $user = $stmt->fetch();
 
     if ($username == $user['username']) {
-        echo 'Username already exist, please pick another username';
+        $error1 = 'Username already exist, please pick another username' . '<br><br>';
     } else if ($email == $user['email']) {
-        echo 'Email already registered, please pick another email';
+        $error2 = 'Email already registered, please pick another email' . '<br><br>';
     } else {
         $stmt = $conn->prepare('INSERT INTO users (username, email, password) VALUES (:username, :email, :password)');
         $stmt->execute(['username' => $username, 'email' => $email, 'password' => $password]);
@@ -29,18 +33,18 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 <html>
 
 <head>
-    <title>Register Form</title>
+    <title>Register Page</title>
+    <link rel="stylesheet" href="log_in_styles.css">
 </head>
 
 <body>
-    <h1>Register</h1>
     <form action="register.php" method="POST">
-        <label for="username">Username: </label><br>
-        <input type="text" name="username" required><br>
-        <label for="email">E-mail: </label><br>
-        <input type="text" name="email" required><br>
-        <label for="password">Password: </label><br>
-        <input type="password" name="password" required><br><br>
+        <h1>Register</h1>
+        <p id="error"><?php echo $error1; ?></p>
+        <p id="error"><?php echo $error2; ?></p>
+        <input type="text" id="username" name="username" required placeholder="Username"><br><br>
+        <input type="text" id="email" name="email" required placeholder="E-mail"><br><br>
+        <input type="password" id="password" name="password" required placeholder="Password"><br><br>
         <input type="submit">
         <p>Already have an account? click <a href="index.php">here</a> to log in</p>
     </form>
