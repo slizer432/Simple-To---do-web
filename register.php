@@ -7,10 +7,21 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $email = $_POST['email'];
     $password = $_POST['password'];
 
-    $stmt = $conn->prepare('INSERT INTO users (username, email, password) VALUES (:username, :email, :password)');
-    $stmt->execute(['username' => $username, 'email' => $email, 'password' => $password]);
+    $stmt = $conn->prepare("SELECT * FROM users WHERE username = :username");
+    $stmt->execute(['username' => $username]);
+    $user = $stmt->fetch();
 
-    header('Location: index.php');
+    if ($username == $user['username']) {
+        echo 'Username already exist, please pick another username';
+    } else if ($email == $user['email']) {
+        echo 'Email already registered, please pick another email';
+    } else {
+        $stmt = $conn->prepare('INSERT INTO users (username, email, password) VALUES (:username, :email, :password)');
+        $stmt->execute(['username' => $username, 'email' => $email, 'password' => $password]);
+
+        header('Location: index.php');
+    }
+
 }
 ?>
 
