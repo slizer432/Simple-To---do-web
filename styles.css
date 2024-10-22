@@ -1,0 +1,54 @@
+body {
+    font-family: inter;
+    align-items: center;
+}
+
+h1 {
+    text-align: center;
+    margin: 20px;
+    padding: 20px;
+}
+
+#logout img {
+    margin: auto;
+    width: 60px;
+    height: auto;
+}
+
+#logo {
+    width: 60px;
+    height: auto;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    max-width:none;
+}
+
+.container {
+    margin: 20px;
+    display: grid;
+    width: auto;
+}
+
+.card {
+    width: 926px;
+    height: 432px;
+    background-color: #8D8D8D;
+    justify-self: center;
+    border-radius: 20px;
+}
+
+.empty {
+    margin: 20px;
+    padding: 20px;
+    text-align: center;
+}
+
+.empty img {
+    margin: 60px;
+    width: 20%;
+}
+
