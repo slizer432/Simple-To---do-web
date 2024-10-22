@@ -1,3 +1,11 @@
+@font-face {
+    font-family: timeburner;
+    src: url(res/Font/Timeburner-xJB8.ttf) format(ttf),
+         url(res/Font/TimeburnerBold-peGR.ttf) format(ttf);
+    font-weight: normal;
+    font-style: normal;
+}
+
 body {
     font-family: inter;
     align-items: center;
@@ -39,16 +47,57 @@ nav {
     background-color: #8D8D8D;
     justify-self: center;
     border-radius: 20px;
+    padding: 20px;
 }
 
 .empty {
-    margin: 20px;
-    padding: 20px;
+    margin: auto;
+    padding: 5px;
     text-align: center;
 }
 
 .empty img {
-    margin: 60px;
+    margin: 50px;
     width: 20%;
 }
 
+.task {
+    padding: 5px;
+    background-color: #D9D9D9;
+    border-radius: 20px;
+    margin-bottom: 15px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.task input {
+    width: 20px;
+    margin-right: 20px;
+    margin-left: 10px;
+    border: solid black 5px;
+    border-radius: 2px;
+    cursor: pointer;
+}
+
+.task p {
+    font-weight: 600;
+    font-size:large;
+}
+
+.edit {
+    display: flex;
+}
+
+.edit img {
+    height: 50px;
+    margin-right: 10px;
+    cursor: pointer;
+}
+
+.desc {
+    display: flex;
+}
+
+#deleteAll {
+    height: 40px;
+}
