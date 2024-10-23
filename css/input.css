@@ -1,0 +1,86 @@
+/* Add this to css/styles.css */
+.task-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 20px;
+}
+
+.task-input {
+    width: 80%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.submit-button {
+    padding: 10px 20px;
+    background-color: rgb(54, 54, 54);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.submit-button:hover {
+    background-color: rgb(0, 0, 0);
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    max-width:none;
+    align-items: center;
+}
+
+.container {
+    margin: 20px;
+    display: grid;
+    width: auto;
+}
+
+.card {
+    width: 926px;
+    height: auto;
+    background-color: #8D8D8D;
+    justify-self: center;
+    border-radius: 20px;
+    padding: 20px;
+    overflow: hidden;
+}
+
+body {
+    font-family: inter;
+    align-items: center;
+}
+
+h1 {
+    text-align: center;
+    margin: 20px;
+    padding: 20px;
+}
+
+#logout img {
+    margin: auto;
+    width: 60px;
+    height: auto;
+}
+
+#logo {
+    width: 60px;
+    height: auto;
+}
+
+#back {
+    width: 40px;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    max-width:none;
+    align-items: center;
+}

@@ -33,7 +33,7 @@ input[type="submit"] {
     color: white;
     border: none;
     cursor: pointer;
-    transition: background-color 0.3s;
+    transition: all 0.3s;
 }
 
 input[type="submit"]:hover {
@@ -45,8 +45,8 @@ body {
     display: grid;
     place-items: center;
     font-family: inter;
-  background: rgb(98,98,98);
-background: linear-gradient(45deg, rgba(98,98,98,1) 0%, rgba(0,0,0,1) 50%, rgba(184,184,184,1) 100%);
+    background: rgb(98,98,98);
+    background: linear-gradient(45deg, rgba(98,98,98,1) 0%, rgba(0,0,0,1) 50%, rgba(184,184,184,1) 100%);
 }
 
 #error {

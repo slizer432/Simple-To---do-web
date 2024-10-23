@@ -6,6 +6,10 @@
     font-style: normal;
 }
 
+form {
+    margin: 0px;
+}
+
 body {
     font-family: inter;
     align-items: center;
@@ -28,11 +32,16 @@ h1 {
     height: auto;
 }
 
+#back {
+    width: 40px;
+}
+
 nav {
     display: flex;
     justify-content: space-between;
     width: 100%;
     max-width:none;
+    align-items: center;
 }
 
 .container {
@@ -48,6 +57,7 @@ nav {
     justify-self: center;
     border-radius: 20px;
     padding: 20px;
+    overflow: hidden;
 }
 
 .empty {
@@ -57,7 +67,7 @@ nav {
 }
 
 .empty img {
-    margin: 50px;
+    margin: 30px;
     width: 20%;
 }
 
@@ -68,15 +78,19 @@ nav {
     margin-bottom: 15px;
     display: flex;
     justify-content: space-between;
+    align-items: center;
 }
 
-.task input {
-    width: 20px;
-    margin-right: 20px;
+.checkStatus {
+    margin-right: 15px;
     margin-left: 10px;
-    border: solid black 5px;
     border-radius: 2px;
     cursor: pointer;
+}
+
+.changeStatus {
+    align-items: center;
+    height: max-content;
 }
 
 .task p {
@@ -86,18 +100,42 @@ nav {
 
 .edit {
     display: flex;
+    align-items: center;
+    height: auto;
 }
 
-.edit img {
+.edit input[type=image], .edit img {
     height: 50px;
     margin-right: 10px;
     cursor: pointer;
 }
 
 .desc {
-    display: flex;
+    display: inline-flex;
+    align-items: center;
 }
 
 #deleteAll {
     height: 40px;
+}
+
+.editAll {
+    display: flex;
+    margin-bottom: 10px;
+}
+
+#create {
+    height: 40px;
+    margin-left:10px ;
+    margin-top: 3px;
+}
+
+.Tasks {
+    max-height: 360px;
+    overflow-y: auto;
+    
+}
+
+.Tasks::-webkit-scrollbar {
+  display: none;
 }

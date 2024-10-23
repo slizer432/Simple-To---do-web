@@ -26,11 +26,11 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
 <head>
     <title>Login Page</title>
-    <link rel="stylesheet" href="log_in_styles.css">
+    <link rel="stylesheet" href="css/log_in.css">
 </head>
 
 <body>
-    <form action="index.php" method="POST">
+    <form action="index.php" method="POST" autocomplete="off">
         <h1>Login</h1>
         <p id="error"><?php echo $error; ?></p>
         <input type="text" id="username" name="username" required placeholder="Username"><br><br>

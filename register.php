@@ -34,7 +34,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
 <head>
     <title>Register Page</title>
-    <link rel="stylesheet" href="log_in_styles.css">
+    <link rel="stylesheet" href="css/log_in.css">
 </head>
 
 <body>

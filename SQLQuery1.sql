@@ -1,0 +1,12 @@
+SELECT * FROM Task;
+SELECT * FROM users;
+
+ALTER TABLE Task ADD Deskripsi NVARCHAR(255);
+
+ALTER TABLE Task ADD Due_Date DATETIME DEFAULT DATEADD(DAY, 7, GETDATE());
+
+DELETE FROM Task;
+
+	INSERT INTO Task (Task_Name) VALUES
+		('Tugas Web'),
+		('UTS Database');
