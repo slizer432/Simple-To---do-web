@@ -84,3 +84,11 @@ nav {
     max-width:none;
     align-items: center;
 }
+
+a {
+    transition: all 0.3s;
+}
+
+a:hover {
+    transform: scale(1.2);
+}

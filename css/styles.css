@@ -110,6 +110,14 @@ nav {
     cursor: pointer;
 }
 
+input, a {
+    transition: all 0.3s;
+}
+
+input:hover, a:hover {
+    transform: scale(1.2);
+}
+
 .desc {
     display: inline-flex;
     align-items: center;

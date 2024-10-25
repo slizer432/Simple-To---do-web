@@ -5,12 +5,6 @@ session_start();
 require 'config.php';
 require 'process/isLogIn.php';
 
-try {
-    $query = $conn->prepare("SELECT * FROM Task");
-} catch (mysqli_sql_exception $e) {
-    die("" . $e->getMessage());
-}
-
 $query = $conn->prepare("SELECT * FROM Task");
 $query->execute();
 $task = $query->fetchAll(PDO::FETCH_ASSOC);
