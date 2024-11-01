@@ -18,7 +18,7 @@ require 'process/isLogIn.php';
                 <img src="res/back.png" id="back">
             </a>
             <h2>Edit Task</h2>
-            <a href="logout.php" id="logout"><img src="res/Emergency Exit.png" alt=""></a>
+            <a href="process/logout.php" id="logout"><img src="res/Emergency Exit.png" alt=""></a>
         </nav>
         <div class="card">
             <form action="process/edit.php" method="POST" class="task-form">

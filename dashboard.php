@@ -23,7 +23,7 @@ $rowCount = count($task);
         <nav>
             <img src="res/Report Card.png" id="logo">
             <h2>To-do List</h2>
-            <a href="logout.php" id="logout"><img src="res/Emergency Exit.png" alt=""></a>
+            <a href="process/logout.php" id="logout"><img src="res/Emergency Exit.png" alt=""></a>
         </nav>
         <div>
             <h1>Hello, what would you like to do today?</h1>
@@ -51,7 +51,7 @@ $rowCount = count($task);
                                         </form>
                                         <p><?php echo $value["Task_Name"]; ?></p>
                                     </div>
-                                    <p>Created date: <?php echo $value["Created_Date"]; ?></p>
+                                    <p>Created date: <?php echo date('d M Y', strtotime($value["Created_Date"])); ?></p>
                                     <div class="edit">
                                         <a
                                             href="editPage.php?id=<?php echo $value['ID']; ?>&task_name=<?php echo $value['Task_Name'] ?>"><img
@@ -73,9 +73,10 @@ $rowCount = count($task);
                                         <input type="hidden" name="id" value="<?php echo $value['ID']; ?>">
                                         <input type="checkbox" class="checkStatus" checked>
                                     </form>
-                                    <p><?php echo $value["Task_Name"]; ?></p>
+                                    <p style="text-decoration-line :line-through"><?php echo $value["Task_Name"]; ?></p>
                                 </div>
-                                <p>Created date: <?php echo $value["Created_Date"]; ?></p>
+                                <p>Created date: <?php echo date('d M Y', strtotime($value["Created_Date"]));
+                                ?></p>
                                 <div class="edit">
                                     <a
                                         href="editPage.php?id=<?php echo $value['ID']; ?>&task_name=<?php echo $value['Task_Name'] ?>"><img
