@@ -1,4 +1,4 @@
-CREATE DATABASE ACCOUNT;
+CREATE DATABASE Account;
 
 CREATE TABLE users (
     id INT IDENTITY(1,1),
@@ -16,15 +16,13 @@ CREATE TABLE tasks (
 	Due_Date DATETIME DEFAULT DATEADD(DAY, 7, GETDATE())
 );
 
+INSERT INTO users (username, email, password)
+VALUES 
+('john_doe', 'john@example.com', 'password1'),
+('jane_doe', 'jane@example.com', 'password2'),
+('michael_smith', 'michael@example.com', 'password3'),
+('anna_jones', 'anna@example.com', 'password4'),
+('david_wilson', 'david@example.com', 'password5');
+
 SELECT * FROM Task;
 SELECT * FROM users;
-
-ALTER TABLE Task ADD Deskripsi NVARCHAR(255);
-
-ALTER TABLE Task ADD Due_Date DATETIME DEFAULT DATEADD(DAY, 7, GETDATE());
-
-DELETE FROM Task;
-
-	INSERT INTO Task (Task_Name) VALUES
-		('Tugas Web'),
-		('UTS Database');
