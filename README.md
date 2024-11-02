@@ -1,0 +1,1 @@
+Just run the SQL Query to make the database. I don't know how to make a remote database yet, so currently I'm using this method. I'll update it as soon I learn how to make remote databases or something like that.
