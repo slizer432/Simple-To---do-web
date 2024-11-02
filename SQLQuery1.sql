@@ -1,3 +1,21 @@
+CREATE DATABASE ACCOUNT;
+
+CREATE TABLE users (
+    id INT IDENTITY(1,1),
+    username NVARCHAR(50),
+    email NVARCHAR(100),
+    password NVARCHAR(255)
+);
+
+CREATE TABLE tasks (
+    ID INT IDENTITY(1,1) PRIMARY KEY,
+    Task_Name NVARCHAR(255) NOT NULL,
+    Status NVARCHAR(50) NOT NULL DEFAULT 'Pending'CHECK (Status IN ('Pending', 'Complete')),
+    Created_Date DATETIME DEFAULT GETDATE(),
+	Deskripsi NVARCHAR(255),
+	Due_Date DATETIME DEFAULT DATEADD(DAY, 7, GETDATE())
+);
+
 SELECT * FROM Task;
 SELECT * FROM users;
 
